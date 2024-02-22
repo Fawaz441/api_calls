@@ -22,3 +22,6 @@
     data, error = CatService().get_random_cat_fact()
 
     ```
+
+To install, run:
+`pip install api_calls`
