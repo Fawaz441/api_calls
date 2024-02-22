@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "api_calls"
-version = "1.0.0"
+version = "1.0.1"
 description = "Package to make api calls"
 readme = "README.md"
 authors = [{ name = "Abdulsalam Fawaz", email = "abdulsalamfawaz4@gmail.com" }]
@@ -27,7 +27,7 @@ Homepage = "https://github.com/Fawaz441/api-calls"
 
 
 [tool.bumpver]
-current_version = "1.0.0"
+current_version = "1.0.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message  = "Bump version {old_version} -> {new_version}"
 commit          = true

@@ -5,6 +5,7 @@ from typing import Any, Tuple, Union, Literal
 class ApiCalls:
     base_url = None
     timeout = 400
+    headers = None
 
     def is_http_url(self, url: str):
         return url.startswith("http://") or url.startswith("https://")
@@ -29,7 +30,7 @@ class ApiCalls:
     def make_request(self,
                      url: str, method: Literal["get", "post", "patch", "delete"],
                      params: Union[dict, None] = None, data: Union[dict, None] = None,
-                     use_json=True) -> Tuple[Any, Union[str, None]]:
+                     use_json=True, headers: Union[dict, None] = None) -> Tuple[Any, Union[str, None]]:
         """
         Make a request to the specified URL using the given HTTP method.
 
@@ -72,6 +73,9 @@ class ApiCalls:
                 parameters["data"] = data
         if params:
             parameters["params"] = params
+        _headers = self.headers or headers
+        if _headers:
+            parameters["headers"] = _headers
         response = call(**parameters)
         if response.ok:
             return self._extract_response(response), None
