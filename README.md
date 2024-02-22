@@ -1,6 +1,6 @@
 # API_CALLS
 
--   This package makes it easy to make api calls in python by abstracing all the logic you'd otherwise use with other packages such as requests
+-   This package makes it easy to make api calls in python by abstracing all the logic you'd otherwise have to write with packages like requests
 -   This package requires requests 2.31.0 or later versions
 -   Example usage below:
 
