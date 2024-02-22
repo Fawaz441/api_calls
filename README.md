@@ -16,7 +16,7 @@
         def get_random_cat_fact(self):
             response = self.make_request(
                 "/facts/random", method="get", params={"amount": 5})
-            return (response)
+            return response
 
 
     data, error = CatService().get_random_cat_fact()
